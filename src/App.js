@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const users = [
+		{name: 'user1', surn: 'surn1', age: 30},
+		{name: 'user2', surn: 'surn2', age: 31},
+		{name: 'user3', surn: 'surn3', age: 32},
+	];
+     const result = users.map(function(item,index){
+		return <li key = {index}>{item}</li>})
+
+	
+	return<div><ul>{result}</ul></div>
 }
+
+
 
 export default App;
